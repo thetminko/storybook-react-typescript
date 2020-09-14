@@ -1,0 +1,24 @@
+@tailwind base;
+/* 
+Add your custom base styles if you have any. Normally, Tailwind is good enough. Below is the examples of base style tags
+https://tailwindcss.com/docs/adding-base-styles
+html, body {}
+a {}
+h1 {} 
+h2 {}
+h3 {}
+*/
+
+@tailwind components;
+/* 
+Add your custom component styles if you have any.
+We should not have too many custom css. We should try to use components (e.g. React component) to solve code duplication instead of creating custom css for same styling.
+https://tailwindcss.com/docs/extracting-components
+*/
+
+
+@tailwind utilities;
+/* 
+Add your custom utilties styles if you have any. example
+https://tailwindcss.com/docs/adding-new-utilities
+*/

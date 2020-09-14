@@ -1,15 +1,11 @@
 import React, { FC } from 'react';
-import './button.css';
+// import './button.css';
 
 export interface Props {
   /**
    * Is this the principal call to action on the page?
    */
   primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
   /**
    * How large should the button be?
    */
@@ -24,13 +20,34 @@ export interface Props {
   onClick?: () => void;
 }
 
-const Button: FC<Props> = ({ primary = true, size = 'medium', backgroundColor, label, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+const Button: FC<Props> = ({ primary = true, size = 'medium', label, ...props }) => {
+  let classes = '';
+
+  if (primary) {
+    classes = 'bg-blue-900 text-white';
+  } else {
+    classes = 'bg-transparent text-gray-900 border';
+  }
+
+  switch (size) {
+    case 'small':
+      classes += ' text-sm px-2 py-1';
+      break;
+    case 'medium':
+      classes += ' text-base px-3 py-1';
+      break;
+    case 'large':
+      classes += ' text-lg px-4 py-2';
+      break;
+    default:
+      classes += '';
+      break;
+  }
+
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      className={`${classes} rounded`}
       {...props}>
       {label}
     </button>

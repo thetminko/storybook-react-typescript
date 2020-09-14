@@ -5,11 +5,8 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import Button, { Props } from '../components/Button';
 
 export default {
-  title: 'Example/Button',
-  component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  title: 'Components/Button',
+  component: Button
 } as Meta;
 
 const Template: Story<Props> = (args) => <Button {...args} />;
@@ -22,6 +19,7 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  primary: false,
   label: 'Button',
 };
 
