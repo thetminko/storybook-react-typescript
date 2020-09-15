@@ -21,33 +21,32 @@ export interface Props {
 }
 
 const Button: FC<Props> = ({ primary = true, size = 'medium', label, ...props }) => {
-  let classes = '';
+  let classes = [];
 
   if (primary) {
-    classes = 'bg-blue-900 text-white';
+    classes.push('bg-blue-900 text-white');
   } else {
-    classes = 'bg-transparent text-gray-900 border';
+    classes.push('bg-transparent text-gray-900 border');
   }
 
   switch (size) {
     case 'small':
-      classes += ' text-sm px-2 py-1';
+      classes.push('text-sm px-2 py-1');
       break;
     case 'medium':
-      classes += ' text-base px-3 py-1';
+      classes.push('text-base px-3 py-1');
       break;
     case 'large':
-      classes += ' text-lg px-4 py-2';
+      classes.push('text-lg px-4 py-2');
       break;
     default:
-      classes += '';
       break;
   }
 
   return (
     <button
       type="button"
-      className={`${classes} rounded`}
+      className={`${classes.join(' ')} rounded`}
       {...props}>
       {label}
     </button>
