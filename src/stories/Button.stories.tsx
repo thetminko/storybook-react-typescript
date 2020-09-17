@@ -5,8 +5,9 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 import Button, { Props } from '../components/Button';
 
 export default {
+  id: 'customId-button',
   title: 'Components/Button',
-  component: Button
+  component: Button,
 } as Meta;
 
 const Template: Story<Props> = (args) => <Button {...args} />;
@@ -16,6 +17,8 @@ Primary.args = {
   primary: true,
   label: 'Button',
 };
+
+Primary.storyName = "My Custom Primary Button";
 
 export const Secondary = Template.bind({});
 Secondary.args = {

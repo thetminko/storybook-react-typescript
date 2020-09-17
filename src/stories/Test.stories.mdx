@@ -1,0 +1,30 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import Button from '../components/Button';
+
+<Meta title="MDX/Button" component={Button} />
+
+# Button
+
+With `MDX` we can define a story for `Button` right in the middle of our
+Markdown documentation.
+
+Testing custom doc using markdown
+<!--- This is your Story template function, shown here in React -->
+
+export const Template = (args) => <Button {...args} />
+// https://github.com/storybookjs/storybook/issues/11542
+
+<Canvas>
+  <Story name="Unchecked" 
+  args={{
+      label: 'Unchecked'
+    }}>
+      {args => <Button {...args} />}
+   </Story>
+  <Story name="Secondary"
+  args={{
+    label: 'Secondary', 
+  }}>
+      {args => <Button {...args} />}
+   </Story>
+</Canvas>
