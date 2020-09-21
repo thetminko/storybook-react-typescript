@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar } from '../components';
 
 export default {
-  title: 'Components',
+  title: 'Components/Navbar',
   component: Navbar,
   parameters: { layout: 'fullscreen' }
 };

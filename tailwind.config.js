@@ -17,7 +17,9 @@ module.exports = {
     },
   },
   variants: {
-    backgroundColor: ['responsive', 'hover', 'focus'] // allow hover, focus for background color, https://tailwindcss.com/docs/pseudo-class-variants
+    backgroundColor: ['responsive', 'hover', 'focus'], // allow hover, focus for background color, https://tailwindcss.com/docs/pseudo-class-variants,
+    opacity: ['responsive', 'hover', 'focus', 'disabled'],
+    textAlign: ['responsive', 'focus']
   },
   plugins: [],
 };
