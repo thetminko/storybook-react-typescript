@@ -3,7 +3,8 @@ import { Navbar } from '../components';
 
 export default {
   title: 'Components',
-  component: Navbar
+  component: Navbar,
+  parameters: { layout: 'fullscreen' }
 };
 
 export const Default = () => <Navbar />;
