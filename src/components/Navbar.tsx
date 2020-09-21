@@ -8,7 +8,8 @@ const Navbar = () => {
           Instagram
         </div>
         <div className="hidden md:block">
-          <input className="text-gray-900 text-xs text-center border rounded px-2 py-1 bg-gray-100 focus:text-left" type="text" placeholder="Search" />
+          <input className="text-gray-900 text-xs text-center border rounded px-2 py-1 bg-gray-100 focus:text-left hover:bg-white"
+            type="text" placeholder="Search" />
         </div>
         <div className="hidden md:block">
           <div className="rounded-full border w-8 h-8">
