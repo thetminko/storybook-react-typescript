@@ -28,27 +28,22 @@ input:focus {
 
 h1 {
   @apply text-5xl; 
-  /* 3rem ~ 48px */
 }
 
 h2 { 
   @apply text-4xl;
-  /* 2.25rem ~ 36px */
 }
 
 h3 {
   @apply text-3xl;
-  /* 1.875rem ~ 30px */
 }
 
 h4 {
   @apply text-2xl;
-  /* 1.875rem ~ 24px */
 }
 
 h5 {
   @apply text-xl;
-  /* 1.875rem ~ 20px */
 }
 
 @tailwind components;
